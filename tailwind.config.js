@@ -5,7 +5,22 @@ module.exports = {
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        phone: '375px',
+      },
+      height: {
+        phone: '777px',
+      },
+      borderRadius: {
+        'xl':  '30px',
+      },
+      colors: {
+        yellow: {
+          300: '#FFE201',
+        }
+      }
+    },
   },
   plugins: [],
 }
