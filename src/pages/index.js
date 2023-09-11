@@ -1,7 +1,13 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-const HomePage = () => {
+function Button({ text }) {
+  return (
+    <button className="font-bold text-lg w-10 h-10 rounded-full bg-white shadow-md flex justify-center items-center">{text}</button>
+  );
+}
+
+export default function HomePage() {
   return (
     <div className="flex justify-center items-center bg-gray-200 h-screen">
       <div className="bg-white rounded-xl w-phone h-phone p-5 flex flex-col justify-center items-center">
@@ -35,9 +41,9 @@ const HomePage = () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <button className="font-bold text-lg w-10 h-10 rounded-full bg-white shadow-md flex justify-center items-center">-</button>
+            <Button text="-" />
             <span className="font-semibold text-2xl px-3">2</span>
-            <button className="font-bold text-lg w-10 h-10 rounded-full bg-white shadow-md flex justify-center items-center">+</button>
+            <Button text="+" />
           </div>
         </div>
 
@@ -46,5 +52,3 @@ const HomePage = () => {
     </div>
   );
 };
-
-export default HomePage;
